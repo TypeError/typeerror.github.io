@@ -1,0 +1,167 @@
+/* ===== CSS RESET & TOKENS ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Typography & colors */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --clr-fg: #1a1a1a;
+  --clr-muted: #6e6e6e;
+  --clr-accent: #bb86fc;
+  --clr-bg: #fafafa;
+  --clr-vapor-1: #ff9de2;
+  --clr-vapor-2: #7af8ff;
+
+  /* Layout */
+  --max-w: 60ch;
+
+  /* Rhythm */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-fg: #f5f5f5;
+    --clr-muted: #a3a3a3;
+    --clr-accent: #caa0ff;
+    --clr-bg: #0e0e0e;
+  }
+}
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  background: var(--clr-bg);
+  color: var(--clr-fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding: var(--space-4) var(--space-3) calc(var(--space-4) * 2);
+  margin-inline: auto;
+  max-width: var(--max-w);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus-visible {
+  position: fixed;
+  left: var(--space-3);
+  top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--clr-accent);
+  color: #fff;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-4);
+  gap: var(--space-2);
+}
+
+.hero-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    var(--clr-vapor-1),
+    var(--clr-vapor-2),
+    var(--clr-bg)
+  );
+  opacity: 0.1; /* better contrast */
+  backdrop-filter: blur(60px);
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.tagline {
+  margin-top: var(--space-1);
+  font-size: 1rem;
+  color: var(--clr-muted);
+  line-height: 1.4;
+}
+
+/* ===== BIO ===== */
+.bio p {
+  margin-top: var(--space-3);
+}
+
+/* Links */
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  text-underline-offset: 0.12em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 0.15em;
+}
+
+/* ===== FOOTER ===== */
+.contact {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--clr-muted);
+}
+
+.contact a {
+  color: inherit;
+  padding: 0 var(--space-1);
+}
+
+.connect-label {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-right: var(--space-1);
+  color: var(--clr-fg);
+}
+
+/* Reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
