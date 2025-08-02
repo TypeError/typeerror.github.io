@@ -26,14 +26,17 @@
           src="assets/cak-avatar.png"
           alt="Avatar of Caleb Kinney"
           class="avatar"
-          width="160"
-          height="160"
-          loading="lazy"
+          width="240"
+          height="240"
           fetchpriority="high"
+          decoding="async"
         />
         <h1 class="name">Caleb Kinney</h1>
         <p class="tagline">
-          Cybersecurity leader · Data storyteller · OSS builder · Dad
+          <span class="lead"
+            >Turning hacker curiosity into data-driven defense.</span
+          ><br />
+          <span class="subtitle">Cybersecurity leader · OSS builder · Dad</span>
         </p>
       </header>
 
@@ -46,49 +49,50 @@
           <a
             href="https://web.archive.org/web/19961023021136/http://www.arcadium.com/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             >Arcadium</a
           >.
         </p>
 
         <p>
           By high school, I was hand-coding websites for the dot-com startup
-          <strong>Iprose Internet · Unique Focus</strong>, building the first
+          <strong>Iprose Internet / Unique Focus</strong>, building the first
           web presence for local businesses, and running
-          <strong>LightOnline</strong>, an electronic-music e-zine. In college,
-          I pivoted into design, crafting advertisements and magazine layouts
-          for MWR Marketing in Yokosuka, Japan.
+          <strong>LightOnline</strong>, a music e-zine. In college, I pivoted
+          into design, crafting advertisements and magazine layouts for MWR
+          Marketing in Yokosuka, Japan.
         </p>
 
         <p>
-          That indie-web chapter evolved into security work: from bug-bounty
-          hunting to leading application-security and vulnerability-management
-          programs. The same curiosity that had me reverse-engineering games now
-          fuels how I blend hacker instincts with data-driven defense.
+          That indie web chapter led naturally into security, moving from bug
+          bounties to leading application security and vulnerability management
+          programs. The same curiosity that once had me reverse engineering
+          games now fuels how I blend hacker instincts with data-driven defense.
         </p>
 
         <p>
-          Today I’m Manager of Security Operations at
-          <a href="https://posit.co" target="_blank" rel="noopener">Posit</a>
+          Today I'm the Manager of Security Operations at
+          <a href="https://posit.co" target="_blank" rel="noopener noreferrer"
+            >Posit</a
+          >
           (formerly RStudio), shaping strategy that safeguards millions of data
           scientists and promoting a secure-by-design culture across product
           lines.
         </p>
 
         <p>
-          Open source keeps me grounded. I’m a core maintainer of
+          Open source keeps me grounded. I'm a core maintainer of
           <em>Hacker Tracker</em>, a DEF CON Goon, and an adviser to the
           NumFOCUS Security Committee. My security-focused code lives at
-          <a href="https://github.com/TypeError" target="_blank" rel="noopener"
+          <a
+            href="https://github.com/TypeError"
+            target="_blank"
+            rel="noopener noreferrer"
             >github.com/TypeError</a
           >, while data-driven experiments land at
-          <a
-            href="https://github.com/snally-labs"
-            target="_blank"
-            rel="noopener"
-            >github.com/snally-labs</a
-          >
-          <span>(in active development)</span>.
+          <a href="https://snally.com" target="_blank" rel="noopener noreferrer"
+            >Snally</a
+          >.
         </p>
 
         <p>
@@ -96,30 +100,45 @@
           <a
             href="https://www.strava.com/athletes/309741"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             >logging miles</a
           >
-          on Maryland back roads, dialing-in craft pour-overs, sampling local
+          on Maryland back roads, dialing in craft pour-overs, sampling local
           beer, and adventuring with my wife and two imaginative daughters.
         </p>
       </article>
 
       <footer class="contact">
-        <span class="connect-label">Connect:</span>
-        <a
-          href="https://www.linkedin.com/in/calebk"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn</a
-        >
-        ·
-        <a href="https://github.com/cak" target="_blank" rel="noopener"
-          >GitHub</a
-        >
-        · <a href="mailto:caleb@typeerror.com">Email</a> ·
-        <a href="https://linktr.ee/typeerror" target="_blank" rel="noopener"
-          >More links</a
-        >
+        <nav aria-label="Connect">
+          <span class="connect-label">Connect:</span>
+          <ul class="contact-list">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/calebk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/cak"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="mailto:caleb@typeerror.com">Email</a></li>
+            <li>
+              <a
+                href="https://linktr.ee/typeerror"
+                target="_blank"
+                rel="noopener noreferrer"
+                >More links</a
+              >
+            </li>
+          </ul>
+        </nav>
       </footer>
     </main>
   </body>
